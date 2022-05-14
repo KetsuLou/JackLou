@@ -28,7 +28,7 @@
   <script>
 		function sendMsg(v,callback){
 			$(".chat-thread").append('<li class="sender">'+v+'</li>')
-	       $.getJSON("http://www.tuling123.com/openapi/api?key=969d86d9ab4f4a77984d78308d360090&info="+v,function(json){
+	       $.getJSON("https://www.tuling123.com/openapi/api?key=969d86d9ab4f4a77984d78308d360090&info="+v,function(json){
 							$(".chat-thread").append('<li class="receiver">'+json.text+'</li>');
 							setTimeout(function() {
 								$(".chat-thread").scrollTop($(".chat-thread")[0].scrollHeight);
