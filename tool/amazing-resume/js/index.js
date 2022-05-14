@@ -1,9 +1,9 @@
-$(function() {
+$(function () {
 	var c = new Coder("style-text");
 	c.load("<p><div class='bef_comment writecode'>/**</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*Hello !!! World ???</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*对不起，职业习惯 ...</div>");
-	c.load("<div class='bef_comment writecode'>&nbsp;*我是EXP，是一名兴趣使然的技术非酉</div>",1000);
+	c.load("<div class='bef_comment writecode'>&nbsp;*我是JACKLOU，是一名兴趣使然的技术小白</div>", 1000);
 	c.load("<div class='bef_comment writecode'>&nbsp;*让我们来点实际的，看看我能做些什么</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*/</div></p>");
 	c.load("<p><div class='bef_comment writecode'>/**</div>");
@@ -102,13 +102,13 @@ $(function() {
 	c.load("<div class='bef_comment writecode'>&nbsp;*让我们准备来再做一些改变</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*/</div></p>");
 	c.load("<p><div class='code writecode'><span class='bef_selector'>#style-text</span> {</div>");
-  	c.load("<div class='code writecode'>&nbsp;<span class='bef_key'>-webkit-transform</span>: <span class='bef_value'>translateX(95%)</span>;</div>");
-  	c.setClass("#style-text", [{
+	c.load("<div class='code writecode'>&nbsp;<span class='bef_key'>-webkit-transform</span>: <span class='bef_value'>translateX(95%)</span>;</div>");
+	c.setClass("#style-text", [{
 		"name": "-webkit-transform",
 		"val": "translateX(95%)"
 	}]);
-  	c.load("<div class='code writecode'>&nbsp;<span class='bef_key'>position</span>: <span class='bef_value'>absolute</span>;</div>");
-  	c.setClass("#style-text", [{
+	c.load("<div class='code writecode'>&nbsp;<span class='bef_key'>position</span>: <span class='bef_value'>absolute</span>;</div>");
+	c.setClass("#style-text", [{
 		"name": "position",
 		"val": "absolute"
 	}]);
@@ -118,49 +118,49 @@ $(function() {
 	c.load("<div class='bef_comment writecode'>&nbsp;*让我们来让他的可读性更好一点吧</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*/</div></p>");
 	c.load("<p><div class='code writecode'><span class='bef_selector'>.comment</span>&nbsp;{ <span class='bef_key'>color</span>: <span class='bef_value'>#857F6B</span>; <span class='bef_key'>font-style</span>: <span class='bef_value'>italic</span>; }</div>");
-	c.addClass(".bef_comment","comment");
+	c.addClass(".bef_comment", "comment");
 	c.load("<div class='code writecode'><span class='bef_selector'>.selector</span>&nbsp;{ <span class='bef_key'>color</span>: <span class='bef_value'>#E69F0F</span>; }</div>");
-	c.addClass(".bef_selector","selector");
+	c.addClass(".bef_selector", "selector");
 	c.load("<div class='code writecode'><span class='selector'>.selector .key</span>&nbsp;{ <span class='bef_key'>color</span>: <span class='bef_value'>#64D5EA</span>; }</div>");
-	c.addClass(".bef_key","key");
+	c.addClass(".bef_key", "key");
 	c.load("<div class='code writecode'><span class='selector'>.key</span>&nbsp;{ <span class='key'>color</span>: <span class='bef_value'>#64D5EA</span>; }</div>");
 	c.load("<div class='code writecode'><span class='selector'>.value</span>&nbsp;{ <span class='key'>color</span>: <span class='bef_value'>#BE84F2</span>; }</div>");
-	c.addClass(".bef_value","value");
+	c.addClass(".bef_value", "value");
 	c.load("<div class='code writecode'><span class='selector'>.value.px</span>&nbsp;{ <span class='key'>color</span>: <span class='value'>#F92772</span>; }</div></p>");
-	c.addClass(".value .bef_px","px");
+	c.addClass(".value .bef_px", "px");
 	c.load("<p><div class='comment writecode'>/**</div>");
 	c.load("<div class='comment writecode'>&nbsp;*现在我们差不多都准备好了</div>");
 	c.load("<div class='comment writecode'>&nbsp;*让我们最后再来做一些3D旋转</div>");
 	c.load("<div class='comment writecode'>&nbsp;*/</div></p>");
 	c.load("<p><div class='code writecode'><span class='selector'>#content</span> {</div>");
-  	c.load("<div class='code writecode'>&nbsp;<span class='key'>-webkit-perspective</span>: <span class='value'>1000<span class='px'>px</span></span>;</div>");
-  	c.setClass("#content", [{
+	c.load("<div class='code writecode'>&nbsp;<span class='key'>-webkit-perspective</span>: <span class='value'>1000<span class='px'>px</span></span>;</div>");
+	c.setClass("#content", [{
 		"name": "-webkit-perspective",
 		"val": "1000px"
 	}]);
-  	c.load("<div class='code writecode'>}</div></p>");
-  	c.load("<p><div class='code writecode'><span class='selector'>#style-text</span> {</div>");
-  	c.load("<div class='code writecode'>&nbsp;<span class='key'>-webkit-transform</span>: <span class='value'>translateX(98.5%) rotateY(-10deg)</span>;</div>");
-  	c.setClass("#style-text", [{
+	c.load("<div class='code writecode'>}</div></p>");
+	c.load("<p><div class='code writecode'><span class='selector'>#style-text</span> {</div>");
+	c.load("<div class='code writecode'>&nbsp;<span class='key'>-webkit-transform</span>: <span class='value'>translateX(98.5%) rotateY(-10deg)</span>;</div>");
+	c.setClass("#style-text", [{
 		"name": "-webkit-transform",
 		"val": "translateX(98.5%) rotateY(-10deg)"
 	}]);
 	c.load("<div class='code writecode'>&nbsp;<span class='key'>-webkit-transform-origin</span>: <span class='value'>right</span>;</div>");
-  	c.setClass("#style-text", [{
+	c.setClass("#style-text", [{
 		"name": "-webkit-transform-origin",
 		"val": "right"
 	}]);
 	c.load("<div class='code writecode'>&nbsp;<span class='key'>max-height</span>: <span class='value'>94.5%</span>;</div>");
-  	c.setClass("#style-text", [{
+	c.setClass("#style-text", [{
 		"name": "max-height",
 		"val": "94.5%"
 	}]);
-  	c.load("<div class='code writecode'>}</div></p>");
-  	c.load("<p><div class='comment writecode'>/**</div>");
+	c.load("<div class='code writecode'>}</div></p>");
+	c.load("<p><div class='comment writecode'>/**</div>");
 	c.load("<div class='comment writecode'>&nbsp;*现在我们差不多可以开始写我的简历了</div>");
 	c.load("<div class='comment writecode'>&nbsp;*我相信你来这不只是为了看这些漂亮的颜色</div>");
 	c.load("<div class='comment writecode'>&nbsp;*/</div></p>");
-	c.addClass("#work-text","pre_work-text");
+	c.addClass("#work-text", "pre_work-text");
 	c.load("<p><div class='code writecode'><span class='selector'>pre</span><span class='key'>:not(#style-text)</span> { </div>");
 	c.load("<div class='code writecode'>&nbsp;<span class='key'>-webkit-transform</span>: <span class='value'>rotateY(10deg)</span>;</div>");
 	c.load("<div class='code writecode'>&nbsp;<span class='key'>-webkit-transform-origin</span>: <span class='value'>left</span>;</div>");
@@ -169,33 +169,28 @@ $(function() {
 	r.load("<div id='md'></div>");
 	var w = new Coder("md");
 	w.load("<h1 class='writecode'>简历</h1>");
-	w.load("<p><div class='writecode'>EXP</div>");
-	w.load("<div class='writecode'>ACMer + 系统架构师</div>");
+	w.load("<p><div class='writecode'>JACKLOU</div>");
+	w.load("<div class='writecode'>软件工程师</div>");
 	w.load("<h1 class='writecode'>联系</h1>");
 	w.load("<ul>");
-	w.load("<li class='writecode'>Site: <a href='http://exp-blog.com/' target='_blank'>http://exp-blog.com/</a></li>");
-	w.load("<li class='writecode'>QQ  : <a href='http://wpa.qq.com/msgrd?v=3&uin=289065406&site=qq&menu=yes' target='_blank'>289065406</a></li>");
-	w.load("<li class='writecode'>Mail: <a href='mailto:289065406@qq.com?subject=[EXP-BLOG]%20Your%20Question%20（请写下您的疑问）&body=What%20can%20I%20help%20you?%20（需要我提供什么帮助吗？）' target='_blank'>289065406@qq.com</li>");
+	w.load("<li class='writecode'>Site: <a href='http://www.jacklou.cn/' target='_blank'>http://www.jacklou.cn/</a></li>");
+	w.load("<li class='writecode'>QQ  : <a href='http://wpa.qq.com/msgrd?v=3&uin=408029164&site=qq&menu=yes' target='_blank'>408029164</a></li>");
+	w.load("<li class='writecode'>Mail: <a href='mailto:408029164@qq.com?subject=[JACKLOU]%20Your%20Question%20（请写下您的疑问）&body=What%20can%20I%20help%20you%3f%20%ef%bc%88%e9%9c%80%e8%a6%81%e6%88%91%e6%8f%90%e4%be%9b%e4%bb%80%e4%b9%88%e5%b8%ae%e5%8a%a9%e5%90%97%ef%bc%9f%ef%bc%89' target='_blank'>408029164@qq.com</li>");
 	w.load("</ul>");
 	w.load("<h1 class='writecode'>技能</h1>");
 	w.load("<ul>");
-	w.load("<li class='writecode'>擅长Micro、Maven、SVN、OD、WP、SS等工具的安装与卸载</li>");
-	w.load("<li class='writecode'>精通C/C＋＋、Java、Python等单词的拼写</li>");
-  w.load("<li class='writecode'>熟悉Windows、Linux、Mac、Android、IOS等系统的开关</li>");
-  w.load("<li class='writecode'>while(alive) {</li>");
-  w.load("<li class='writecode'>&nbsp;&nbsp;&nbsp;&nbsp;eat();</li>");
-  w.load("<li class='writecode'>&nbsp;&nbsp;&nbsp;&nbsp;code();</li>");
-  w.load("<li class='writecode'>&nbsp;&nbsp;&nbsp;&nbsp;sleep();</li>");
-  w.load("<li class='writecode'>}</li>");
+	w.load("<li class='writecode'>擅长VSCode、Notepad++等工具的安装与卸载</li>");
+	w.load("<li class='writecode'>精通C/C＋＋、Python等单词的拼写</li>");
+	w.load("<li class='writecode'>熟悉Windows、Linux等系统的开关</li>");
+	w.load("<li class='writecode'>while(alive) {</li>");
+	w.load("<li class='writecode'>&nbsp;&nbsp;&nbsp;&nbsp;eat();</li>");
+	w.load("<li class='writecode'>&nbsp;&nbsp;&nbsp;&nbsp;code();</li>");
+	w.load("<li class='writecode'>&nbsp;&nbsp;&nbsp;&nbsp;sleep();</li>");
+	w.load("<li class='writecode'>}</li>");
 	w.load("</ul>");
 	w.load("<h1 class='writecode'>自我箴言</h1>");
 	w.load("<ul>");
-  w.load("<li class='writecode'>越努力，越幸运</li>");
-  w.load("<li class='writecode'>人生就是一场修行，人必自助而天助之</li>");
-	w.load("<li class='writecode'>不断寻找偷懒的方法，聪明地工作</li>");
-	w.load("<li class='writecode'>万事先修德，养性必制怒</li>");
-	w.load("<li class='writecode'>犯错趁早，防微杜渐</li>");
-	w.load("<li class='writecode'>因上努力 果上求缘</li>");
+	w.load("<li class='writecode'>既要脚踏实地，也要仰望星空。</li>");
 	w.load("</ul>");
 	c.load("<p><div class='comment writecode'>/**</div>");
 	c.load("<div class='comment writecode'>&nbsp;*左面的简历看起来不是太令人满意，让我们先给他来点动态渲染</div>");
@@ -265,8 +260,8 @@ $(function() {
 	c.load("<div class='comment writecode'>&nbsp;*这样基本上就差不多了</div>");
 	c.load("<div class='comment writecode'>&nbsp;*");
 	c.load("<div class='comment writecode'>&nbsp;*如果你想和我联系</div>");
-	c.load("<div class='comment writecode'>&nbsp;*QQ  : 289065406</div>");
-	c.load("<div class='comment writecode'>&nbsp;*Mail: 289065406@qq.com</div>");
+	c.load("<div class='comment writecode'>&nbsp;*QQ  : 408029164</div>");
+	c.load("<div class='comment writecode'>&nbsp;*Mail: 408029164@qq.com</div>");
 	c.load("<div class='comment writecode'>&nbsp;*最后非常感谢您愿意花3分钟看完我的简历！</div>");
 	c.load("<div class='comment writecode'>&nbsp;*/</div></p>");
 
@@ -274,36 +269,36 @@ $(function() {
 
 var m = 0;
 
-var Coder = function(dom) {
+var Coder = function (dom) {
 	this._dom = dom;
 };
 
 Coder.prototype = {
 	constructor: Coder,
-	load: function(code, second) {
+	load: function (code, second) {
 		var dom = this._dom;
 		var o = this;
 		var _second = second ? second : 1000;
 		_second = m + _second;
-		setTimeout(function() {
-			$('#' + dom).scrollTop( $('#' + dom)[0].scrollHeight );
+		setTimeout(function () {
+			$('#' + dom).scrollTop($('#' + dom)[0].scrollHeight);
 			$("#" + dom).append(code);
 		}, _second);
 		m = _second;
 	},
-	setClass: function(dom, styles,second) {
+	setClass: function (dom, styles, second) {
 		var _second = second ? second : 0;
 		_second = m + _second;
 		for (var i in styles) {
-			setTimeout(function() {
+			setTimeout(function () {
 				$(dom).css(styles[i].name, styles[i].val);
 			}, _second);
 		}
 		m = _second;
 	},
-	addClass:function(dom,className){
+	addClass: function (dom, className) {
 		var second = m;
-		setTimeout(function() {
+		setTimeout(function () {
 			$(dom).addClass(className);
 		}, second);
 	}

@@ -322,7 +322,7 @@ Ext.onReady(function () {
 				jsonviewer.removeZhuanyi();
 			}},
 			'->',
-			{text: '眈眈探求', handler: function(){
+			{text: 'JackLou', handler: function(){
         window.location.href="http://www.exp-blog.com/";
 			}}
 		],

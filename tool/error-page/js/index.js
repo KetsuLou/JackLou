@@ -58,7 +58,7 @@ switchWord = function () {
             switchWord();
         }, wordDuration);
     } else {
-        window.location = "http://exp-blog.com/";
+        window.location = "http://www.jacklou.cn/";
     }
 };
 

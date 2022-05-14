@@ -14,10 +14,28 @@
  	
   <div> 
    <br />
-   <h2><a href="/" target="_blank">JackLou</a> | 站点辅助功能组件一览</h2> 
+   <h2><a href="https://exp-blog.com" target="_blank">JackLou</a> | 站点辅助功能组件一览</h2> 
    <br /> 
    
    <div>
+    <table id="tool" class="dataintable"> 
+     <tbody> 
+      <tr> 
+       <th width="30%">爬虫类</th> 
+       <th width="70%">&nbsp;</th> 
+      </tr>
+      <tr> 
+        <td>威胁情报播报（<a href="https://lyy289065406.github.io/threat-broadcast/" target="_blank">Threat-Broadcast</a>）</td> 
+        <td>从公开的威胁情报来源爬取并整合最新 CVE 信息，支持订阅</td> 
+      </tr>
+      <tr> 
+        <td>Steam 特惠折扣榜单（<a href="https://lyy289065406.github.io/steam-discount/" target="_blank">steam-discount</a>）</td> 
+        <td>从 Steam 商城爬取游戏的【打折（史低）】、【零元购】、【测评】、【热度】情况的榜单整理并展示，半小时刷新一次</td> 
+      </tr>
+     </tbody>
+    </table>
+
+
     <table id="tool" class="dataintable"> 
      <tbody> 
       <tr> 
@@ -155,6 +173,75 @@
       <tr> 
        <td>易语言代码解析器（<a href="tool/e-analyser/index.html" target="_blank">E Analyser</a>）</td> 
        <td>易语言代码在线解析、语法高亮</td> 
+      </tr>
+     </tbody> 
+    </table> 
+   </div> 
+
+   <br /> 
+   
+   <div>
+    <table id="docker" class="dataintable"> 
+     <tbody> 
+      <tr> 
+       <th width="30%">容器类</th> 
+       <th width="70%">&nbsp;</th> 
+      </tr>
+      <tr> 
+       <td>trojan（<a href="https://github.com/lyy289065406/trojan-docker" target="_blank">Github</a>）</td> 
+       <td>docker 一键部署 trojan 服务端 ：自建 VPS 科学上网</td> 
+      </tr> 
+      <tr> 
+       <td>vscode-web（<a href="https://github.com/lyy289065406/vscode-web-docker" target="_blank">Github</a>）</td> 
+       <td>docker 一键部署 vscode-web ：使用浏览器远程开发</td> 
+      </tr> 
+      <tr> 
+       <td>kali（<a href="https://github.com/lyy289065406/kali-docker" target="_blank">Github</a>）</td> 
+       <td>docker 一键部署 kali 渗透测试环境</td> 
+      </tr> 
+      <tr> 
+       <td>linux-os（<a href="https://github.com/lyy289065406/linux-os-docker" target="_blank">Github</a>）</td> 
+       <td>docker 一键部署 linux 纯净系统集</td> 
+      </tr> 
+      <tr> 
+       <td>jellyfin（<a href="https://github.com/lyy289065406/jellyfin-docker" target="_blank">Github</a>）</td> 
+       <td>docker 一键部署 jellyfin 在线媒体库（一个非常 Cool 的媒体播放器，支持在线观看电影、音乐、图片、书籍、TV、MV 等多种格式，支持内网穿透，支持电视投屏！）</td> 
+      </tr>
+      <tr> 
+       <td>calibre（<a href="https://github.com/lyy289065406/calibre-docker" target="_blank">Github</a>）</td> 
+       <td>docker 一键部署 calibre 在线书库</td> 
+      </tr>
+      <tr> 
+       <td>mStream（<a href="https://github.com/lyy289065406/mstream-docker" target="_blank">Github</a>）</td> 
+        <td>docker 一键部署 mStream 私人云音乐</td> 
+      </tr>
+      <tr> 
+       <td>seafile（<a href="https://github.com/lyy289065406/seafile-docker" target="_blank">Github</a>）</td> 
+        <td>docker 一键部署 seafile 私人云盘</td> 
+      </tr>   
+      <tr> 
+       <td>qBitTorrent（<a href="https://github.com/lyy289065406/qBitTorrent-docker" target="_blank">Github</a>）</td> 
+       <td>docker 一键部署 VPS-BT 离线下载</td> 
+      </tr> 
+      <tr> 
+       <td>gitbook-server（<a href="https://github.com/lyy289065406/gitbook-server-docker" target="_blank">Github</a>）</td> 
+       <td>docker 一键部署 GitBook 服务器</td> 
+      </tr>
+      <tr> 
+       <td>JIRA（<a href="https://github.com/lyy289065406/jira-docker" target="_blank">Github</a>）</td> 
+       <td>docker 一键部署 JIRA 破解版</td> 
+      </tr> 
+      <tr> 
+       <td>Gitlab（<a href="https://github.com/lyy289065406/gitlab-docker" target="_blank">Github</a>）</td> 
+       <td>docker 一键部署 Gitlab 破解版</td> 
+      </tr>
+      <tr> 
+        <td>Nexus（<a href="https://github.com/lyy289065406/nexus-docker" target="_blank">Github</a>）</td> 
+        <td>docker 一键部署 nexus 仓库</td> 
+      </tr>
+      <tr> 
+        <td>CMDB（<a href="https://github.com/lyy289065406/bk-cmdb-docker" target="_blank">Github</a>）</td> 
+        <td>docker 一键部署 蓝鲸 CMDB</td> 
       </tr>
      </tbody> 
     </table> 
