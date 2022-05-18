@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>JackLou | m3u8播放器</title>
+    <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" />
+    <script type="text/javascript" src="../../base/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../base/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../base/css/layer/layer.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../base/css/base.css" />
+    <script type="text/javascript" src="../../js/insertvideo.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <script type="text/javascript" src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                m3u8播放器
+            </div>
+            <div class="panel-body text-center">
+                <div class="form-group">
+                    <video id="searchvideo" controls controlsList="nodownload">
+                        <source src="https://infura-ipfs.io/ipfs/QmVaHhDQXCsiMff9SoZVNemPs7WxWoe8Pj1qKwQSKEFVqH"
+                            type="video/mp4">您的浏览器不支持 video 属性。
+                    </video>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" rows="3" id="text" placeholder="请输入链接"></input>
+                </div>
+                <div class="form-group">
+                    <button id="btnsearchvideo" class="btn btn-success" onclick="search()"> <i
+                            class="fa fa-sign-in"></i>
+                        开始播放</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

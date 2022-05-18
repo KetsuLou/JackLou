@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>素材库</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+  </head>
+  <script type="text/javascript" src="../../js/weixin.js">
+  </script>
+  <script src="../../js/jquery-1.10.2.js">
+  </script>
+  
+  <body class="main">
+    <button id="message" onclick="main_message();">提示</button>
+    <form action="#">
+      <input type="text" id="text" placeholder="请输入快乐代码查看素材OvO">
+      <button type="button" onclick="search(this)" style="font-size:20px;" value="siteproxy.jacklou.tk/https/infura-ipfs.io">搜索</button>
+    </form>
+    <table id="allbutton">
+      <tr>
+        <td align="center">
+          <a style="color:#298A08;">点击下方切换线路👇</a>
+          <a style="color:#088A85;">以下线路不保证全部能用！</a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <div class="search">
+            <button onclick="search(this);" value="ipfs.eth.aragon.network">线路1</button>
+            <button onclick="search(this);" value="ipfs.fleek.co">线路2</button>
+            <button onclick="search(this);" value="ipfs.decoo.io">线路3</button>
+            <button onclick="search(this);" value="ipfs.1-2.dev">线路4</button>
+            <button onclick="search(this);" value="siteproxy.jacklou.tk/https/dweb.link">线路5</button>
+            <button onclick="search(this);" value="ipfs.denarius.io">线路6</button>
+            <button onclick="search(this);" value="siteproxy.jacklou.tk/https/infura-ipfs.io">线路7</button>
+            <button onclick="search(this);" value="infura-ipfs.io">线路8</button>
+            <button onclick="search(this);" value="ipfs.tubby.cloud">线路9</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <video id="searchvideo" controls controlsList="nodownload">
+      <source src="https://infura-ipfs.io/ipfs/QmVaHhDQXCsiMff9SoZVNemPs7WxWoe8Pj1qKwQSKEFVqH" type="video/mp4">您的浏览器不支持 video 属性。</video>
+    <center>
+      <iframe src="../live2d/index.html" frameborder="0" scrolling="no" id="live2d">
+      </iframe>
+    </center>
+  </body>
+  <script type="text/javascript" src="./js/index.js">
+  </script>
+
+</html>
