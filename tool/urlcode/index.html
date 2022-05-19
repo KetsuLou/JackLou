@@ -1,0 +1,91 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <link rel="shortcut icon" href="https://exp-blog.com/favicon.png" />
+    <meta name="author" content="EXP: www.exp-blog.com" />
+    <title>JackLou | URL编码</title>
+    <meta name="keywords" content="在线摩斯电码转换器" />
+    <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" />
+    <script type="text/javascript" src="../../base/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../base/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../base/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../base/css/layer/layer.js"></script>
+    <script type="text/javascript" src="../../base/js/main.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../base/css/base.css" />
+
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                URL编码
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <p>
+                        <span>请输入编码内容：</span>
+                        <br />
+                    </p>
+                    <textarea class="url form-control" type="text" id="text" oninput="OnInput (event)"
+                        onpropertychange="OnPropChanged (event)">JackLou | URL编码</textarea>
+                </div>
+                <div class="form-group">
+                    <div class="btn-group">
+                        <button class="btn btn-warning" onclick="jsEscape()">escape编码</button>
+                        <button class="btn btn-warning" onclick="jsDeEscape()">escape解码</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-success" onclick="jsEncode()">encode编码</button>
+                        <button class="btn btn-success" onclick="jsDeEncode()">encode解码</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="jsEncodeComponent()">encodecomponent编码</button>
+                        <button class="btn btn-primary" onclick="jsDeEncodeComponent()">encodecomponent解码</button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <label><input id="chooseone" type="radio" name="code" value="0" value="1" checked />对输入框内容进行编码和解码</label>
+                <label><input id="choosetwo" type="radio" name="code" value="2" />对结果进行继续编码和解码</label>
+            </div>
+            <div class="panel-body">
+
+                <p>
+                    编码结果：
+                    <span id="encodeFlag"></span><br />
+                    <textarea class="form-control" id="encode"></textarea>
+                </p>
+                <p>
+                    解码结果：
+                    <span id="decodeFlag"></span>
+                    <textarea class="form-control" id="decode"></textarea>
+                </p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                总结
+            </div>
+            <div class="panel-body">
+                <p>
+                    escape：对除ASCII字母、数字、标点符号 @ * _ + - . / 以外的其他字符进行编码。
+                </p>
+                <p>
+                    codeURI：对除ASCII字母、数字、标点符号 ! @ # $ & * ( ) = : / ; ? + ' 以外的其他字符进行编码。
+                </p>
+                <p>
+                    codecomponent：对除ASCII字母、数字 - _ . ! ~ * ' ( ) 以外的其他字符进行编码。
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

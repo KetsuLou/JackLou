@@ -1,0 +1,21 @@
+input.url {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+}
+
+.btn {
+    background-color: sandybrown;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+form {
+    background-color: rgb(209, 202, 202);
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.explain {
+    background-color: sandybrown;
+}
