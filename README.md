@@ -3,7 +3,7 @@
 
 ------
 
-> <b>组件目录索引&nbsp;:&nbsp;</b>[[ Index-Page ]](https://lyy289065406.github.io/site-package/)
+> <b>组件目录索引&nbsp;:&nbsp;</b>[[ Index-Page ]](http://www.jacklou.tk)
 
 
 
