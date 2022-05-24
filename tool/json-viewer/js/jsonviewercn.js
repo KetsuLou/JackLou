@@ -323,7 +323,7 @@ Ext.onReady(function () {
 			}},
 			'->',
 			{text: 'JackLou', handler: function(){
-        window.location.href="http://www.exp-blog.com/";
+        window.location.href="http://www.jacklou.cn/";
 			}}
 		],
 		items: edit
