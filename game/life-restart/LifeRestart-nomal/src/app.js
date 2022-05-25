@@ -17,8 +17,8 @@ globalThis.goto = async tag => {
     switch(tag) {
         case 'github': url = 'https://github.com/KetsuLou/lifeRestart'; break;
         case 'discord': url = 'https://discord.gg/U3qrf49NMQ'; break;
-        case 'sponsor_afd': url = 'https://afdian.net/@LifeRestart'; break;
-        case 'sponsor_ddf': url = 'https://dun.mianbaoduo.com/@vickscarlet'; break;
+        case 'sponsor_afd': url = 'https://www.jacklou.cn'; break;
+        case 'sponsor_ddf': url = 'https://space.bilibili.com/41369736'; break;
     }
     try {
         if(Laya.Browser.onIOS) {
