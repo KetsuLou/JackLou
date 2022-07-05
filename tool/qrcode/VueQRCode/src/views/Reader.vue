@@ -14,6 +14,7 @@
     </div>
 
     <textarea
+      style="width: 100%;"
       class="result"
       cols="76"
       rows="6"
