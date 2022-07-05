@@ -38,9 +38,9 @@ export default {
       timer: null,
       result: "",
       imgurl:
-        "https://raw.githubusercontent.com/MuGuiLin/QRCode/master/VueQRCode/src/assets/github.com.png",
+        "https://raw.githubusercontent.com/KetsuLou/jacklou/master/tool/qrcode/HtmlQRCode/img/github.com.png",
       imgurl2:
-        "https://raw.githubusercontent.com/MuGuiLin/QRCode/master/VueQRCode/src/assets/github.com.png",
+        "https://raw.githubusercontent.com/KetsuLou/jacklou/master/tool/qrcode/HtmlQRCode/img/github.com.png",
       isAnimation: true,
       audio: Object,
       video: Object,
