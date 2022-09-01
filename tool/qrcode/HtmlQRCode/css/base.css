@@ -14,7 +14,7 @@
 
 .menu nav {
     display    : inline-block;
-    padding    : 20px;
+    padding    : 10px;
     font-size  : 20px;
     font-weight: bold;
     cursor     : pointer;
@@ -30,32 +30,13 @@
     z-index : 1;
 }
 
-.main .create {
-    text-align: center;
-}
-
-.main .create input {
-    position : relative;
-    margin   : 20px 0;
-    padding  : 12px;
-    width    : 300px;
-    font-size: 18px;
-    border   : 1px solid #42b983;
-    overflow : hidden;
-}
-
-.main .create input[type="button"] {
-    color     : white;
-    border    : none;
-    background: #42b983;
-    cursor    : pointer;
-}
-
-.main .create .qrcode img {
-    margin       : 20px auto;
-    padding      : 30px;
+.main .qrcode img {
+    margin       : 10px auto;
+    padding      : 10px;
     width        : 360px;
+    max-width    : 50vw;
     height       : 360px;
+    max-height   : 50vw;
     border-radius: 8px;
     border       : 2px solid gray;
 }
@@ -68,9 +49,10 @@
 
 .main .reader .sweep {
     position  : relative;
-    margin    : 20px;
+    margin    : 10px;
     padding   : 12px;
-    width     : 300px;
+    width     : 200px;
+    max-width : 50vw;
     font-size : 18px;
     cursor    : pointer;
     color     : white;
@@ -86,17 +68,19 @@
 }
 
 .main .reader .imgurl {
-    margin    : 20px;
+    margin    : 10px;
     text-align: center;
 }
 
 .main .reader .imgurl img {
-    margin       : 20px;
+    margin       : 10px;
     padding      : 10px;
     border       : 1px solid gray;
     border-radius: 8px;
-    width        : 280px;
-    height       : 260px;
+    width        : 200px;
+    max-width    : 50vw;
+    height       : 200px;
+    max-height   : 50vw;
 }
 
 .main .reader .result {
