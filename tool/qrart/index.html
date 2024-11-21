@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>JackLou | 二维码艺术生成</title>
+    <link rel="stylesheet" type="text/css" href="../../../base/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../base/css/font-awesome.css" />
+    <script type="text/javascript" src="../../../base/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../base/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../base/css/layer/layer.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../base/css/base.css" />
+    <style>
+        body {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type=text] {
+            display: block;
+            width: 380px;
+            height: 30px;
+            margin: 0 auto;
+            font-size: 10pt;
+        }
+
+        input[type=number] {
+            display: block;
+            width: 380px;
+            height: 30px;
+            margin: 0 auto;
+            font-size: 10pt;
+        }
+
+        input[type=file] {
+            display: block;
+            width: 380px;
+            height: 30px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            width: 380px;
+            margin: 10px auto;
+        }
+
+        .group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #qr {
+            margin: 5px;
+        }
+
+        #image {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <div class="container clearfix">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                二维码艺术生成
+            </div>
+            <div class="panel-body" style="display: inline-flex; width: 100%;">
+                <div style="width: 100%;">
+                    <div class="form-group">
+                        <label>
+                            Value:
+                            <textarea id="value" class="form-control" style="width: 100%;" type="text" rows="3"
+                                cols="45">https://www.jacklou.cn/</textarea>
+                        </label>
+                        <div class="form-group">
+                            <label>
+                                Background:
+                                <input id="bg" class="form-control" style="width: 100%;" type="text" value="#FFF">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                Size:
+                                <input id="size" class="form-control" style="width: 100%;" type="number" value="195">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                Version:
+                                <input id="version" class="form-control" style="width: 100%;" type="number" value="10">
+                            </label>
+                            <label>
+                                Fill type:
+                                <select id='fillType' class="form-control" style="width: 100%;" name="fillType">
+                                    <option>scale_to_fit</option>
+                                    <option selected>fill</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input id="file" style="width: 100%;" type="file">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                Threshold: <input type="radio" value="threshold" name="filter">
+                                Color: <input type="radio" value="color" name="filter" checked>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body" style="display: inline-flex; width: 100%;">
+                <div style="width: 100%;">
+                    <div class="form-group">
+                        <div class="group">
+                            <div id="qr"></div>
+                            <div id="image"><img src="./example.png"></div>
+                        </div>
+                        <div class="group">
+                            <div id="combine" target="_blank" download="output.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./src/qrcode.js"></script>
+        <script src="./dist/qart.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var value = 'https://www.jacklou.cn/';
+                var filter = 'color';
+                var imagePath = './example.png';
+                var version = 10;
+                var imageSize = 75 + (version * 12) - 24;
+                var bg = "#FFF";
+                var size = "175";
+                var fillType = 'fill';
+
+                var self = this;
+
+                $('#image img').width(imageSize);
+
+                function makeQR() {
+                    // console.log('Current version:', version)
+                    qrcode.qrcode.stringToBytes = qrcode.qrcode.stringToBytesFuncs['UTF-8']
+                    var qr = qrcode.qrcode(version, 'H');
+                    qr.addData(value);
+                    try {
+                        qr.make();
+
+                    } catch (err) {
+                        console.log('Version is low:', version)
+                        console.log('Error:', err)
+                    }
+                    document.getElementById('qr').innerHTML = qr.createImgTag(3);
+                }
+
+                function makeQArt() {
+                    new QArt({
+                        value: value,
+                        imagePath: imagePath,
+                        filter: filter,
+                        version: version,
+                        background: bg,
+                        size: size,
+                        fillType: fillType
+                    }).make(document.getElementById('combine'));
+                }
+
+                function getBase64(file, callback) {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function () {
+                        callback(reader.result);
+                    };
+                }
+
+                $('#value').keyup(function () {
+                    value = $(this).val();
+                    makeQR();
+                    makeQArt();
+                });
+
+                $('#bg').keyup(function () {
+                    bg = $(this).val();
+                    makeQArt();
+                });
+
+                $('#size').keyup(function () {
+                    size = $(this).val();
+                    makeQArt();
+                });
+
+                $('#fillType').bind('change', function () {
+                    fillType = $(this).val();
+                    makeQArt();
+                });
+
+
+                $('#version').bind('keyup change click', function () {
+                    console.log($('#version').val());
+                    version = $('#version').val();
+                    imageSize = 75 + (version * 12) - 24;
+                    $('#image img').width(imageSize);
+                    makeQR();
+                    makeQArt();
+                });
+
+                $('#file').change(function () {
+                    getBase64(this.files[0], function (base64Img) {
+                        var regex = /data:(.*);base64,(.*)/gm;
+                        var parts = regex.exec(base64Img);
+                        imagePath = parts[0];
+                        $('#image img').attr('src', imagePath);
+                        makeQArt();
+                    });
+                });
+
+                $('input[type=radio]').click(function () {
+                    filter = $(this).val();
+                    makeQArt();
+                });
+
+                makeQR();
+                makeQArt();
+            });
+        </script>
+</body>
+
+</html>
