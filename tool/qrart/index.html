@@ -50,6 +50,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .clear {
@@ -89,13 +90,13 @@
                         <div class="form-group">
                             <label>
                                 Size:
-                                <input id="size" class="form-control" style="width: 100%;" type="number" value="195">
+                                <input id="size" class="form-control" style="width: 100%;" type="number" value="279">
                             </label>
                         </div>
                         <div class="form-group">
                             <label>
                                 Version:
-                                <input id="version" class="form-control" style="width: 100%;" type="number" value="10">
+                                <input id="version" class="form-control" style="width: 100%;" type="number" value="17">
                             </label>
                             <label>
                                 Fill type:
@@ -129,116 +130,136 @@
                             <div id="image"><img src="./example.png"></div>
                         </div>
                         <div class="group">
-                            <div id="combine" target="_blank" download="output.png"></div>
+                            <div id="combine"></div>
+                        </div>
+                        <div class="group">
+                            <a id="download" download="output.png" onclick="downloads()">下载</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="./src/qrcode.js"></script>
-    <script src="./dist/qart.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var value = 'https://www.jacklou.cn/';
-            var filter = 'color';
-            var imagePath = './example.png';
-            var version = 10;
-            var imageSize = 75 + (version * 12) - 24;
-            var bg = "#FFF";
-            var size = "175";
-            var fillType = 'fill';
+        <script src="./src/qrcode.js"></script>
+        <script src="./dist/qart.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var value = 'https://www.jacklou.cn/';
+                var filter = 'color';
+                var imagePath = './example.png';
+                var version = 17;
+                var imageSize = 75 + (version * 12) - 24;
+                var bg = "#FFF";
+                var size = document.getElementById('size').value;
+                var fillType = 'fill';
 
-            var self = this;
+                var self = this;
 
-            $('#image img').width(imageSize);
-
-            function makeQR() {
-                // console.log('Current version:', version)
-                qrcode.qrcode.stringToBytes = qrcode.qrcode.stringToBytesFuncs['UTF-8']
-                var qr = qrcode.qrcode(version, 'H');
-                qr.addData(value);
-                try {
-                    qr.make();
-
-                } catch (err) {
-                    console.log('Version is low:', version)
-                    console.log('Error:', err)
-                }
-                document.getElementById('qr').innerHTML = qr.createImgTag(3);
-            }
-
-            function makeQArt() {
-                new QArt({
-                    value: value,
-                    imagePath: imagePath,
-                    filter: filter,
-                    version: version,
-                    background: bg,
-                    size: size,
-                    fillType: fillType
-                }).make(document.getElementById('combine'));
-            }
-
-            function getBase64(file, callback) {
-                var reader = new FileReader();
-                reader.readAsDataURL(file);
-                reader.onload = function () {
-                    callback(reader.result);
-                };
-            }
-
-            $('#value').keyup(function () {
-                value = $(this).val();
-                makeQR();
-                makeQArt();
-            });
-
-            $('#bg').keyup(function () {
-                bg = $(this).val();
-                makeQArt();
-            });
-
-            $('#size').keyup(function () {
-                size = $(this).val();
-                makeQArt();
-            });
-
-            $('#fillType').bind('change', function () {
-                fillType = $(this).val();
-                makeQArt();
-            });
-
-
-            $('#version').bind('keyup change click', function () {
-                console.log($('#version').val());
-                version = $('#version').val();
-                imageSize = 75 + (version * 12) - 24;
                 $('#image img').width(imageSize);
-                makeQR();
-                makeQArt();
-            });
 
-            $('#file').change(function () {
-                getBase64(this.files[0], function (base64Img) {
-                    var regex = /data:(.*);base64,(.*)/gm;
-                    var parts = regex.exec(base64Img);
-                    imagePath = parts[0];
-                    $('#image img').attr('src', imagePath);
+                function makeQR() {
+                    // console.log('Current version:', version)
+                    qrcode.qrcode.stringToBytes = qrcode.qrcode.stringToBytesFuncs['UTF-8']
+                    var qr = qrcode.qrcode(version, 'H');
+                    qr.addData(value);
+                    try {
+                        qr.make();
+
+                    } catch (err) {
+                        console.log('Version is low:', version)
+                        console.log('Error:', err)
+                    }
+                    document.getElementById('qr').innerHTML = qr.createImgTag(3);
+                }
+
+                function makeQArt() {
+                    new QArt({
+                        value: value,
+                        imagePath: imagePath,
+                        filter: filter,
+                        version: version,
+                        background: bg,
+                        size: size,
+                        fillType: fillType
+                    }).make(document.getElementById('combine'));
+                }
+
+                function getBase64(file, callback) {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function () {
+                        callback(reader.result);
+                    };
+                }
+
+                $('#value').keyup(function () {
+                    value = $(this).val();
+                    makeQR();
                     makeQArt();
                 });
-            });
 
-            $('input[type=radio]').click(function () {
-                filter = $(this).val();
+                $('#bg').keyup(function () {
+                    bg = $(this).val();
+                    makeQArt();
+                });
+
+                $('#size').keyup(function () {
+                    size = $(this).val();
+                    makeQArt();
+                });
+
+                $('#fillType').bind('change', function () {
+                    fillType = $(this).val();
+                    makeQArt();
+                });
+
+
+                $('#version').bind('keyup change click', function () {
+                    console.log($('#version').val());
+                    version = $('#version').val();
+                    imageSize = 75 + (version * 12) - 24;
+                    $('#image img').width(imageSize);
+                    makeQR();
+                    makeQArt();
+                });
+
+                $('#file').change(function () {
+                    getBase64(this.files[0], function (base64Img) {
+                        var regex = /data:(.*);base64,(.*)/gm;
+                        var parts = regex.exec(base64Img);
+                        imagePath = parts[0];
+                        $('#image img').attr('src', imagePath);
+                        makeQArt();
+                    });
+                });
+
+                $('input[type=radio]').click(function () {
+                    filter = $(this).val();
+                    makeQArt();
+                });
+
+                makeQR();
                 makeQArt();
             });
-
-            makeQR();
-            makeQArt();
-        });
-    </script>
+        </script>
+        <script>
+            function downloads() {
+                var base64 = $("#combine").find("canvas")[0].toDataURL();
+                var byteCharacters = atob(
+                    base64.replace(/^data:image\/(png|jpeg|jpg);base64,/, "")
+                );
+                var byteNumbers = new Array(byteCharacters.length);
+                for (var i = 0; i < byteCharacters.length; i++) {
+                    byteNumbers[i] = byteCharacters.charCodeAt(i);
+                }
+                var byteArray = new Uint8Array(byteNumbers);
+                var blob = new Blob([byteArray], {
+                    type: undefined,
+                });
+                var download = document.getElementById('download');
+                download.href = URL.createObjectURL(blob);
+            }
+        </script>
 </body>
 
 </html>
